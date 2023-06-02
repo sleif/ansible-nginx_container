@@ -1,40 +1,32 @@
-sleif.nginx_docker
-============
+# sleif.nginx_container
 
-This role runs a nginx instance on docker.
+This role runs an nginx instance on docker.
 
-Requirements
-------------
+## Requirements
 
-Use it on a machine setup with ansible role sleif.docker.
+None
 
-Role Variables
---------------
+## Role Variables
 
 - container_storage_dir_base: '/srv'
-- DOCKER_NETWORK_NAME (can be defined in sleif.docker)
 
-Dependencies
-------------
+## Dependencies
 
-Needs sleif.docker to make sure Docker is configured as needed.
+None
 
-Example Playbook
-----------------
+## Example Playbook
 
     - hosts: "server"
       user: root
-      vars:
-        DOCKER_NETWORK_NAME: 'custom_docker_network'
+      # vars:
+      #   DOCKER_NETWORK_NAME: 'custom_docker_network'
       roles:
-        - { role: sleif.nginx_docker, tags: "nginx_docker" }
+        - { role: sleif.nginx_container, tags: "nginx_container" }
 
-License
--------
+## License
 
 MIT
 
-Author Information
-------------------
+## Author Information
 
 Created in 2021 by Sebastian Berthold
