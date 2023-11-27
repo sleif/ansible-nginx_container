@@ -19,7 +19,7 @@ None
     - hosts: "server"
       user: root
       # vars:
-      #   DOCKER_NETWORK_NAME: 'custom_docker_network'
+      #   docker_network_name: 'custom_docker_network'
       roles:
         - { role: sleif.nginx_container, tags: "nginx_container" }
 
